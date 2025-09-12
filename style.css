@@ -160,3 +160,37 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: separate;
+    border-spacing: 1;
+    margin-top: 20px;
+    font-family: "Inter", sans-serif;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 24px;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: 1px solid #C4C4C4;
+    font-size: 18px;
+    border-radius: 25px;
+}
+
+tr:first-child td:first-child {
+    border-top-left-radius: 25px;
+}
+tr:first-child td:last-child {
+    border-top-right-radius: 25px;
+}
+tr:last-child td:first-child {
+    border-bottom-left-radius: 25px;
+}
+tr:last-child td:last-child {
+    border-bottom-right-radius: 25px;
+}
