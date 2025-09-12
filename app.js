@@ -10,7 +10,25 @@ function agregarAmigos() {
   if (nombreIngresado !== '') {
     nombreAmigo.push(nombreIngresado);
     input.value = ''; // Limpiar el campo de entrada después de agregar
+    crearFila(nombreIngresado);
   }
-  
 }
 
+function crearFila(nombreIngresado) {
+  let tableBody = document.getElementById('amigosTable').getElementsByTagName("tbody")[0]
+  let nuevaFila = tableBody.insertRow();
+  let celda1 = nuevaFila.insertCell(0);
+  celda1.textContent = nombreIngresado;
+
+  console.log(nombreIngresado);
+}
+function mostrarAmigo() {
+  const nombreAmigosize = nombreAmigo.length;
+  const posicionNombre = Math.floor(Math.random() * nombreAmigosize);
+  alert(`Tu amigo secreto es: ${nombreAmigo[posicionNombre]}`);
+
+
+}
+document.getElementById('button-add-input').addEventListener('click', agregarAmigos)
+
+document.getElementById('button-sorting').addEventListener('click', mostrarAmigo)
