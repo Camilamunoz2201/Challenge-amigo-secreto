@@ -7,13 +7,15 @@ function agregarAmigos() {
   let input = document.getElementById('amigo');
   let nombreIngresado = input.value.trim();
   
+  //Evaluar que el input no esté vacío
   if (nombreIngresado !== '') {
-    nombreAmigo.push(nombreIngresado);
+    nombreAmigo.push(nombreIngresado); // Agregar el nombre al array
     input.value = ''; // Limpiar el campo de entrada después de agregar
-    crearFila(nombreIngresado);
+    crearFila(nombreIngresado); // Crear una nueva fila en la tabla
   }
 }
 
+// Función para crear una nueva fila en la tabla con el nombre ingresado
 function crearFila(nombreIngresado) {
   let tableBody = document.getElementById('amigosTable').getElementsByTagName("tbody")[0]
   let nuevaFila = tableBody.insertRow();
@@ -22,6 +24,7 @@ function crearFila(nombreIngresado) {
 
   console.log(nombreIngresado);
 }
+// Función para mostrar un amigo secreto aleatorio
 function mostrarAmigo() {
   const nombreAmigosize = nombreAmigo.length;
   const posicionNombre = Math.floor(Math.random() * nombreAmigosize);
@@ -29,6 +32,7 @@ function mostrarAmigo() {
 
 
 }
+// Eventos para los botones
 document.getElementById('button-add-input').addEventListener('click', agregarAmigos)
 
 document.getElementById('button-sorting').addEventListener('click', mostrarAmigo)
