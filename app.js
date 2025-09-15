@@ -33,7 +33,15 @@ function mostrarAmigo() {
   Swal.fire({
   title: "Ronda terminada!",
   text: "Tu amigo secreto es: " + amigoSecreto,
-  icon: "success",
+  imageUrl: "/assets/Imagen-texto-amigoSecreto.jpg",
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: "Imagen de felicitacion",
+    
+    customClass: {
+    title: 'swal-titulo',
+    htmlContainer: 'swal-texto'
+  },
 });
 
 }
