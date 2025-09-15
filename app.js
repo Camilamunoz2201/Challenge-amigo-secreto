@@ -28,8 +28,13 @@ function crearFila(nombreIngresado) {
 function mostrarAmigo() {
   const nombreAmigosize = nombreAmigo.length;
   const posicionNombre = Math.floor(Math.random() * nombreAmigosize);
-  alert(`Tu amigo secreto es: ${nombreAmigo[posicionNombre]}`);
-
+  const amigoSecreto = nombreAmigo[posicionNombre];
+  // Mostrar el resultado usando Toast
+  Swal.fire({
+  title: "Ronda terminada!",
+  text: "Tu amigo secreto es: " + amigoSecreto,
+  icon: "success",
+});
 
 }
 // Eventos para los botones
