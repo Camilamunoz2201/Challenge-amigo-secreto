@@ -194,3 +194,18 @@ tr:last-child td:first-child {
 tr:last-child td:last-child {
     border-bottom-right-radius: 25px;
 }
+
+/* Fuente para el título */
+.swal-titulo {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+/* Fuente para el texto */
+.swal-texto {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #555;
+}
+
