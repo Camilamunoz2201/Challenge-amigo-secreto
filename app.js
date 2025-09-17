@@ -6,13 +6,32 @@ function agregarAmigos() {
   // Retorna el arreglo.
   let input = document.getElementById('amigo');
   let nombreIngresado = input.value.trim();
-  
-  //Evaluar que el input no esté vacío
-  if (nombreIngresado !== '') {
-    nombreAmigo.push(nombreIngresado); // Agregar el nombre al array
-    input.value = ''; // Limpiar el campo de entrada después de agregar
-    crearFila(nombreIngresado); // Crear una nueva fila en la tabla
+
+  console.log(nombreIngresado);
+
+  //Evaluar que el input no esté vacío y solo contenga letras y espacios
+  // Expresión regular para validar solo letras y espacios (mínimo 3 caracteres)
+  const soloLetrasRegex = /^[A-Za-zÁÉÍÓÚáéíóú\s]{3,}$/;
+  if (nombreIngresado === '' || !soloLetrasRegex.test(nombreIngresado)) {
+    Swal.fire({
+      title: "Texto no valido",
+      text: "Por favor ingresa un nombre, sin números ni caracteres especiales.",
+      imageUrl: "/assets/Imagen-texto-amigoSecreto.jpg",
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: "Imagen de felicitacion",
+
+      customClass: {
+        title: 'swal-titulo',
+        htmlContainer: 'swal-texto'
+      },
+    });
+
+    return; // Salir de la función si el input está vacío o no es válido
   }
+  nombreAmigo.push(nombreIngresado); // Agregar el nombre al array
+  input.value = ''; // Limpiar el campo de entrada después de agregar
+  crearFila(nombreIngresado); // Crear una nueva fila en la tabla
 }
 
 // Función para crear una nueva fila en la tabla con el nombre ingresado
@@ -29,20 +48,20 @@ function mostrarAmigo() {
   const nombreAmigosize = nombreAmigo.length;
   const posicionNombre = Math.floor(Math.random() * nombreAmigosize);
   const amigoSecreto = nombreAmigo[posicionNombre];
-  // Mostrar el resultado usando Toast
+  // Mostrar el resultado usando Sweetalert
   Swal.fire({
-  title: "Ronda terminada!",
-  text: "Tu amigo secreto es: " + amigoSecreto,
-  imageUrl: "/assets/Imagen-texto-amigoSecreto.jpg",
-  imageWidth: 400,
-  imageHeight: 200,
-  imageAlt: "Imagen de felicitacion",
-    
+    title: "Ronda terminada!",
+    text: "Tu amigo secreto es: " + amigoSecreto,
+    imageUrl: "/assets/Imagen-texto-amigoSecreto.jpg",
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: "Imagen de felicitacion",
+
     customClass: {
-    title: 'swal-titulo',
-    htmlContainer: 'swal-texto'
-  },
-});
+      title: 'swal-titulo',
+      htmlContainer: 'swal-texto'
+    },
+  });
 
 }
 // Eventos para los botones
