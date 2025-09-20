@@ -33,6 +33,19 @@ git clone https://github.com/Camilamunoz2201/Challenge-amigo-secreto.git
 - Interfaz moderna y responsiva
 
 ---
+## 🎲 ¿Cómo jugar el juego del Amigo Secreto?
+
+El juego del Amigo Secreto es una dinámica divertida para grupos de amigos, familiares o compañeros de trabajo. Aquí te explicamos cómo jugar usando esta aplicación:
+
+1. **Ingresa los nombres:** Escribe el nombre de cada participante en el campo de texto y presiona "Añadir". Verás la lista de nombres agregados en la tabla.
+2. **Verifica la lista:** Asegúrate de que todos los nombres estén correctamente escritos y que no falte nadie.
+3. **Realiza el sorteo:** Haz clic en el botón "Sortear amigo". La aplicación seleccionará aleatoriamente un nombre y te mostrará quién es tu amigo secreto mediante una notificación visual.
+4. **Guarda el secreto:** Cada participante debe mantener en secreto el nombre que le fue asignado hasta el momento de la entrega de regalos.
+5. **¡Disfruta el intercambio!:** Organiza la entrega de regalos y revela los amigos secretos al final.
+
+> **Consejo:** Puedes repetir el sorteo si lo deseas, pero asegúrate de que cada participante tenga solo un amigo secreto y que no se repitan los emparejamientos.
+
+---
 
 ## 📝 Proceso de realización
 
@@ -87,6 +100,8 @@ Creado por [Camila Muñoz](https://github.com/Camilamunoz2201)
 
 ---
 
+
 <p align="center">
   <b>¡Gracias por visitar este proyecto! ⭐</b>
 </p>
+
