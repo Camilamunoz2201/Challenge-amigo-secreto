@@ -7,7 +7,6 @@ function agregarAmigos() {
   let input = document.getElementById('amigo');
   let nombreIngresado = input.value.trim();
 
-  console.log(nombreIngresado);
 
   //Evaluar que el input no esté vacío y solo contenga letras y espacios
   // Expresión regular para validar solo letras y espacios (mínimo 3 caracteres)
@@ -17,14 +16,13 @@ function agregarAmigos() {
       title: "Texto no valido",
       text: "Por favor ingresa un nombre, sin números ni caracteres especiales.",
       icon: "error"
-      },
-    )};
-    
+    });
     return; // Salir de la función si el input está vacío o no es válido
   }
   nombreAmigo.push(nombreIngresado); // Agregar el nombre al array
   input.value = ''; // Limpiar el campo de entrada después de agregar
   crearFila(nombreIngresado); // Crear una nueva fila en la tabla
+}
 
 // Función para crear una nueva fila en la tabla con el nombre ingresado
 function crearFila(nombreIngresado) {
@@ -33,7 +31,6 @@ function crearFila(nombreIngresado) {
   let celda1 = nuevaFila.insertCell(0);
   celda1.textContent = nombreIngresado;
 
-  console.log(nombreIngresado);
 }
 // Función para mostrar un amigo secreto aleatorio
 function mostrarAmigo() {
