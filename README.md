@@ -81,12 +81,6 @@ Creado por [Camila Muñoz](https://github.com/Camilamunoz2201)
 
 ---
 
-## 📬 Contacto
-
-¿Tienes dudas, sugerencias o quieres contribuir? ¡No dudes en abrir un issue o contactarme por GitHub!
-
----
-
 ## 🏆 ¡Disfruta el juego y que la suerte te acompañe!
 
 ![Amigo Secreto](assets/amigo-secreto.png)
