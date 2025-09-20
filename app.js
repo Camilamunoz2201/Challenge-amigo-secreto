@@ -16,23 +16,15 @@ function agregarAmigos() {
     Swal.fire({
       title: "Texto no valido",
       text: "Por favor ingresa un nombre, sin números ni caracteres especiales.",
-      imageUrl: "/assets/Imagen-texto-amigoSecreto.jpg",
-      imageWidth: 400,
-      imageHeight: 200,
-      imageAlt: "Imagen de felicitacion",
-
-      customClass: {
-        title: 'swal-titulo',
-        htmlContainer: 'swal-texto'
+      icon: "error"
       },
-    });
-
+    )};
+    
     return; // Salir de la función si el input está vacío o no es válido
   }
   nombreAmigo.push(nombreIngresado); // Agregar el nombre al array
   input.value = ''; // Limpiar el campo de entrada después de agregar
   crearFila(nombreIngresado); // Crear una nueva fila en la tabla
-}
 
 // Función para crear una nueva fila en la tabla con el nombre ingresado
 function crearFila(nombreIngresado) {
